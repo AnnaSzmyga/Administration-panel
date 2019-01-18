@@ -1,12 +1,6 @@
 /* Colors */
-/*$paragraph-color: #000000;
-$brand-main-color: #ff0000;*/
 /* Font sizes */
-/*$paragraph-font-size: 16px;*/
 /* Fonts */
-/*$brand-font: "Open Sans", Helvetica, Arial;
-$paragraph-font: "Open Sans", Helvetica, Arial;*/
-/*TEST*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -344,5 +338,67 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+/*Components*/
+.page-header {
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 500;
+  color: #a6a6a6;
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #a6a6a6;
+}
+
+.links-general, .large-link, .small-link {
+  color: #56819f;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.links-general:hover, .large-link:hover, .small-link:hover {
+  color: #ffa200;
+}
+
+.large-link {
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.small-link {
+  font-size: 13px;
+  line-height: 42px;
+}
+
+body {
+  padding: 35px;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  line-height: 42px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/*ONLY FOR STYLEGUIDE FILE*/
+.styleguide-title {
+  color: #a3a3a3;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+.link-hover {
+  color: #ffa200;
 }
 /*# sourceMappingURL=style.css.map */
