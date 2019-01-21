@@ -341,7 +341,7 @@ template {
 }
 
 /*Components*/
-.page-header {
+.page-heading {
   font-size: 16px;
   line-height: 42px;
   font-weight: 500;
@@ -349,21 +349,21 @@ template {
   text-transform: uppercase;
 }
 
-.section-header {
+.section-heading {
   font-size: 16px;
   line-height: 42px;
   font-weight: 700;
   color: #a6a6a6;
 }
 
-.links-general, .large-link, .small-link {
+.link-general, .large-link, .small-link {
   color: #56819f;
   font-weight: 300;
   text-decoration: none;
   cursor: pointer;
 }
 
-.links-general:hover, .large-link:hover, .small-link:hover {
+.link-general:hover, .large-link:hover, .small-link:hover {
   color: #ffa200;
 }
 
@@ -375,6 +375,45 @@ template {
 .small-link {
   font-size: 13px;
   line-height: 42px;
+}
+
+button {
+  min-height: 40px;
+  min-width: 95px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 42px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 0 10px;
+}
+
+.orange-btn {
+  background-color: #f58220;
+}
+
+.orange-btn:hover {
+  background-color: #ffa200;
+}
+
+.grey-btn {
+  background-color: #979797;
+}
+
+.grey-btn:hover {
+  background-color: #bababa;
+}
+
+.disabled-btn {
+  background-color: #e3e3e3;
+}
+
+.disabled-btn img {
+  height: 10px;
+  margin-right: 10px;
 }
 
 body {
@@ -396,9 +435,5 @@ p {
   font-weight: 300;
   line-height: 42px;
   text-transform: uppercase;
-}
-
-.link-hover {
-  color: #ffa200;
 }
 /*# sourceMappingURL=style.css.map */

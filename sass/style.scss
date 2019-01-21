@@ -4,8 +4,9 @@
 @import "layout";
 
 /*Components*/
-@import "components/headers";
+@import "components/headings";
 @import "components/links";
+@import "components/buttons";
 
 body {
 	padding: 35px;
@@ -29,6 +30,4 @@ p {
 	line-height: 42px;
 	text-transform: uppercase;
 }
-.link-hover {
-	color: $links-hover-color;
-}
+

@@ -1,0 +1,32 @@
+button {
+	min-height: 40px;
+	min-width: 95px;
+	font-size: $button-font-size;
+	color: #fff;
+	font-weight: 300;
+	line-height: 42px;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	padding: 0 10px;
+}
+.orange-btn {
+	background-color: $orange-btn-color;
+	&:hover {
+		background-color: $orange-btn-hover-color;
+	}
+}
+.grey-btn {
+	background-color: $grey-btn-color;
+	&:hover {
+		background-color: $grey-btn-hover-color;
+	}
+}
+.disabled-btn {
+	background-color: $disabled-btn-color;
+	img {
+		height: 10px;
+		margin-right: 10px;
+	}
+}
