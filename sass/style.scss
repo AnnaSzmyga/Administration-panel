@@ -18,6 +18,18 @@ p {
 	font-size: $paragraph-font-size;
 	font-weight: 300;
 }
+.one-digit-list {
+	border-bottom: 1px solid $headings-color;
+	.section-heading {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 16px;
+		float: right;
+		margin-bottom: 0;
+	}
+}
 
 
 

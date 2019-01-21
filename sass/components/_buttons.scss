@@ -25,8 +25,9 @@ button {
 }
 .disabled-btn {
 	background-color: $disabled-btn-color;
-	img {
+	svg {
 		height: 10px;
 		margin-right: 10px;
+		fill: #ffffff;
 	}
 }

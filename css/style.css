@@ -411,9 +411,10 @@ button {
   background-color: #e3e3e3;
 }
 
-.disabled-btn img {
+.disabled-btn svg {
   height: 10px;
   margin-right: 10px;
+  fill: #ffffff;
 }
 
 body {
@@ -426,6 +427,21 @@ body {
 p {
   font-size: 14px;
   font-weight: 300;
+}
+
+.one-digit-list {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.one-digit-list .section-heading {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.one-digit-list p {
+  font-size: 16px;
+  float: right;
+  margin-bottom: 0;
 }
 
 /*ONLY FOR STYLEGUIDE FILE*/
