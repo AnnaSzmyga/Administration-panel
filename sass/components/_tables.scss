@@ -58,30 +58,6 @@
 			border: 0;
 		}
 	}
-	.sorting-button {
-		border: 0;
-		color: $headings-color;
-		font-size: 13px;
-		line-height: 15px;
-		font-weight: 700;
-		background-color: #fff;
-		border-radius: 4px;
-		cursor: pointer;
-		margin-bottom: 15px;
-		&:hover {
-			color: $main-text-color;
-			background-color: $table-hover-background;
-			svg {
-				visibility: visible;	
-			}
-		}
-		svg {
-			fill: $headings-color;
-			height: 7px;
-			margin-left: 10px;
-			visibility: hidden;
-		}
-	}
 	p {
 		font-size: 13px;
 		line-height: 17px;

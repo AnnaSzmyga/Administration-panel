@@ -1,0 +1,41 @@
+.date-period-form{
+	.date-period-wrapper {
+		display: inline-block;
+		border: 1px solid $disabled-btn-color;
+		border-radius: 4px;
+		&:hover {
+			border: 1px solid $grey-btn-color;
+			svg {
+				fill: $main-text-color;
+			}
+		}
+		input {
+			border: 0;
+			height: 30px;
+			max-width: 150px;
+			margin: 5px auto;
+			font-size: 14px;
+			font-weight: 300;
+			color: $main-text-color;
+			padding-left: 20px;
+		}
+		.first-date {
+			border-right: 1px solid $disabled-btn-color;
+		}
+		svg {
+			height: 15px;
+			fill: $grey-btn-color;
+			cursor: pointer;
+			margin-right: 15px;
+		}
+	}
+	.orange-btn {
+		height: 42px;
+		width: 42px;
+		margin-left: 10px;
+		svg {
+			height: 16px;
+			fill: #fff;
+		}
+	}
+}

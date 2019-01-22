@@ -381,9 +381,8 @@ template {
   line-height: 42px;
 }
 
-button {
+.button-general, .orange-btn, .grey-btn, .disabled-btn, .sorting-button {
   min-height: 40px;
-  min-width: 95px;
   font-size: 18px;
   color: #fff;
   font-weight: 300;
@@ -419,6 +418,31 @@ button {
   height: 10px;
   margin-right: 10px;
   fill: #ffffff;
+}
+
+.sorting-button {
+  color: #a6a6a6;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.sorting-button:hover {
+  color: #333333;
+  background-color: #f1f3f3;
+}
+
+.sorting-button:hover svg {
+  visibility: visible;
+}
+
+.sorting-button svg {
+  fill: #a6a6a6;
+  height: 7px;
+  margin-left: 10px;
+  visibility: hidden;
 }
 
 .one-digit-list {
@@ -487,38 +511,57 @@ button {
   border: 0;
 }
 
-.sorting-table .sorting-button {
-  border: 0;
-  color: #a6a6a6;
-  font-size: 13px;
-  line-height: 15px;
-  font-weight: 700;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.sorting-table .sorting-button:hover {
-  color: #333333;
-  background-color: #f1f3f3;
-}
-
-.sorting-table .sorting-button:hover svg {
-  visibility: visible;
-}
-
-.sorting-table .sorting-button svg {
-  fill: #a6a6a6;
-  height: 7px;
-  margin-left: 10px;
-  visibility: hidden;
-}
-
 .sorting-table p {
   font-size: 13px;
   line-height: 17px;
   padding: 0 10px;
+}
+
+.date-period-form .date-period-wrapper {
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+.date-period-form .date-period-wrapper:hover {
+  border: 1px solid #979797;
+}
+
+.date-period-form .date-period-wrapper:hover svg {
+  fill: #333333;
+}
+
+.date-period-form .date-period-wrapper input {
+  border: 0;
+  height: 30px;
+  max-width: 150px;
+  margin: 5px auto;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  padding-left: 20px;
+}
+
+.date-period-form .date-period-wrapper .first-date {
+  border-right: 1px solid #e3e3e3;
+}
+
+.date-period-form .date-period-wrapper svg {
+  height: 15px;
+  fill: #979797;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.date-period-form .orange-btn {
+  height: 42px;
+  width: 42px;
+  margin-left: 10px;
+}
+
+.date-period-form .orange-btn svg {
+  height: 16px;
+  fill: #fff;
 }
 
 body {

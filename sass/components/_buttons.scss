@@ -1,6 +1,5 @@
-button {
+.button-general {
 	min-height: 40px;
-	min-width: 95px;
 	font-size: $button-font-size;
 	color: #fff;
 	font-weight: 300;
@@ -12,18 +11,21 @@ button {
 	padding: 0 10px;
 }
 .orange-btn {
+	@extend .button-general;
 	background-color: $orange-btn-color;
 	&:hover {
 		background-color: $orange-btn-hover-color;
 	}
 }
 .grey-btn {
+	@extend .button-general;
 	background-color: $grey-btn-color;
 	&:hover {
 		background-color: $grey-btn-hover-color;
 	}
 }
 .disabled-btn {
+	@extend .button-general;
 	background-color: $disabled-btn-color;
 	svg {
 		height: 10px;
@@ -31,3 +33,25 @@ button {
 		fill: #ffffff;
 	}
 }
+.sorting-button {
+		@extend .button-general;
+		color: $headings-color;
+		font-size: 13px;
+		line-height: 15px;
+		font-weight: 700;
+		background-color: #fff;
+		margin-bottom: 15px;
+		&:hover {
+			color: $main-text-color;
+			background-color: $table-hover-background;
+			svg {
+				visibility: visible;	
+			}
+		}
+		svg {
+			fill: $headings-color;
+			height: 7px;
+			margin-left: 10px;
+			visibility: hidden;
+		}
+	}
