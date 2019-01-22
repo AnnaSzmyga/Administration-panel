@@ -1,0 +1,90 @@
+.one-digit-list {
+	border-bottom: 1px solid $headings-color;
+	.line-heading {
+		display: inline-block;
+	}
+	p {
+		font-size: 16px;
+		float: right;
+	}
+}
+.table-general {
+	width: 100%;
+	border-spacing: 0px;
+	tr {
+		&:hover {
+		 	background-color: $table-hover-background;
+		}
+		td {
+			border-top: 1px solid $headings-color;
+		}
+	}
+	.last-row td {
+		border-bottom: 1px solid $headings-color;
+	}
+}
+.link-table {
+	@extend .table-general;
+	.first-column {
+		width: 40%;
+	}
+	.line-heading {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.icon-box {
+		width: 15%;
+		svg {
+			height: 10px;
+			fill: $headings-color;
+			margin: 0 10px;
+			cursor: pointer;
+			&:hover {
+				fill: $orange-btn-hover-color;
+			}
+		}
+		svg.trash-icon {
+			height: 15px;
+		}
+	}
+}
+.sorting-table {
+	@extend .table-general;
+	.first-row {
+		&:hover {
+			background-color: #fff;
+		}
+		td {
+			border: 0;
+		}
+	}
+	.sorting-button {
+		border: 0;
+		color: $headings-color;
+		font-size: 13px;
+		line-height: 15px;
+		font-weight: 700;
+		background-color: #fff;
+		border-radius: 4px;
+		cursor: pointer;
+		margin-bottom: 15px;
+		&:hover {
+			color: $main-text-color;
+			background-color: $table-hover-background;
+			svg {
+				visibility: visible;	
+			}
+		}
+		svg {
+			fill: $headings-color;
+			height: 7px;
+			margin-left: 10px;
+			visibility: hidden;
+		}
+	}
+	p {
+		font-size: 13px;
+		line-height: 17px;
+		padding: 0 10px;
+	}
+}

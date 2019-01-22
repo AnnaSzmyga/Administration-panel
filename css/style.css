@@ -349,11 +349,15 @@ template {
   text-transform: uppercase;
 }
 
-.section-heading {
+.section-heading, .line-heading {
   font-size: 16px;
   line-height: 42px;
   font-weight: 700;
   color: #a6a6a6;
+}
+
+.line-heading {
+  margin-bottom: 0;
 }
 
 .link-general, .large-link, .small-link {
@@ -417,31 +421,122 @@ button {
   fill: #ffffff;
 }
 
-body {
-  padding: 35px;
-  font-family: "Roboto", sans-serif;
-  color: #333333;
-  line-height: 42px;
-}
-
-p {
-  font-size: 14px;
-  font-weight: 300;
-}
-
 .one-digit-list {
   border-bottom: 1px solid #a6a6a6;
 }
 
-.one-digit-list .section-heading {
+.one-digit-list .line-heading {
   display: inline-block;
-  margin-bottom: 0;
 }
 
 .one-digit-list p {
   font-size: 16px;
   float: right;
-  margin-bottom: 0;
+}
+
+.table-general, .link-table, .sorting-table {
+  width: 100%;
+  border-spacing: 0px;
+}
+
+.table-general tr:hover, .link-table tr:hover, .sorting-table tr:hover {
+  background-color: #f1f3f3;
+}
+
+.table-general tr td, .link-table tr td, .sorting-table tr td {
+  border-top: 1px solid #a6a6a6;
+}
+
+.table-general .last-row td, .link-table .last-row td, .sorting-table .last-row td {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.link-table .first-column {
+  width: 40%;
+}
+
+.link-table .line-heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.link-table .icon-box {
+  width: 15%;
+}
+
+.link-table .icon-box svg {
+  height: 10px;
+  fill: #a6a6a6;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.link-table .icon-box svg:hover {
+  fill: #ffa200;
+}
+
+.link-table .icon-box svg.trash-icon {
+  height: 15px;
+}
+
+.sorting-table .first-row:hover {
+  background-color: #fff;
+}
+
+.sorting-table .first-row td {
+  border: 0;
+}
+
+.sorting-table .sorting-button {
+  border: 0;
+  color: #a6a6a6;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.sorting-table .sorting-button:hover {
+  color: #333333;
+  background-color: #f1f3f3;
+}
+
+.sorting-table .sorting-button:hover svg {
+  visibility: visible;
+}
+
+.sorting-table .sorting-button svg {
+  fill: #a6a6a6;
+  height: 7px;
+  margin-left: 10px;
+  visibility: hidden;
+}
+
+.sorting-table p {
+  font-size: 13px;
+  line-height: 17px;
+  padding: 0 10px;
+}
+
+body {
+  padding: 35px;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  line-height: 42px;
+  box-sizing: border-box;
+}
+
+container {
+  max-width: 685px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /*ONLY FOR STYLEGUIDE FILE*/

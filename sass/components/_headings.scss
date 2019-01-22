@@ -11,3 +11,7 @@
 	font-weight: 700;
 	color: $headings-color;
 }
+.line-heading {
+	@extend .section-heading;
+	margin-bottom: 0;
+}

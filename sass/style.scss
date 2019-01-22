@@ -7,28 +7,22 @@
 @import "components/headings";
 @import "components/links";
 @import "components/buttons";
+@import "components/tables";
 
 body {
 	padding: 35px;
 	font-family: $main-font;
 	color: $main-text-color;
 	line-height: 42px;
+	box-sizing: border-box;
+}
+container {
+	max-width: 685px;
+	margin: 0 auto;
 }
 p {
 	font-size: $paragraph-font-size;
 	font-weight: 300;
-}
-.one-digit-list {
-	border-bottom: 1px solid $headings-color;
-	.section-heading {
-		display: inline-block;
-		margin-bottom: 0;
-	}
-	p {
-		font-size: 16px;
-		float: right;
-		margin-bottom: 0;
-	}
 }
 
 
