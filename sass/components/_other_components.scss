@@ -1,0 +1,37 @@
+.pagination-wrapper {
+	ul {
+		display: flex;
+		justify-content: space-between;
+		list-style-type: none;
+		max-width: 460px;
+		li {
+			height: 40px;
+			width: 40px;
+			text-align: center;
+			&:active {
+				background-color: $table-hover-background;
+				a {
+					color: $grey-btn-hover-color;
+					font-weight: 700;
+				}
+			}
+			a {
+				text-decoration: none;
+				svg {
+					height: 20px;
+					margin-top: 10px;
+					fill: $grey-btn-hover-color;
+					&:hover {
+						fill: $links-hover-color;
+					}
+				}
+			}
+		}
+		.previous {
+			margin-right: 10px;
+		}
+		.next {
+			margin-left: 10px;
+		}
+	}
+}

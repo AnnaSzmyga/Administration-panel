@@ -9,15 +9,15 @@
 @import "components/buttons";
 @import "components/tables";
 @import "components/forms";
+@import "components/other_components";
 
 body {
-	padding: 35px;
 	font-family: $main-font;
 	color: $main-text-color;
 	line-height: 42px;
 	box-sizing: border-box;
 }
-container {
+.container {
 	max-width: 685px;
 	margin: 0 auto;
 }
@@ -30,6 +30,9 @@ p {
 
 /*ONLY FOR STYLEGUIDE FILE*/
 
+.styleguide-body {
+	padding: 35px;
+}
 .styleguide-title {
 	color: $styleguide-title-color;
 	font-size: 11px;

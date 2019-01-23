@@ -417,7 +417,7 @@ template {
 .disabled-btn svg {
   height: 10px;
   margin-right: 10px;
-  fill: #ffffff;
+  fill: #fff;
 }
 
 .sorting-button {
@@ -564,15 +564,60 @@ template {
   fill: #fff;
 }
 
+.pagination-wrapper ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  list-style-type: none;
+  max-width: 460px;
+}
+
+.pagination-wrapper ul li {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+.pagination-wrapper ul li:active {
+  background-color: #f1f3f3;
+}
+
+.pagination-wrapper ul li:active a {
+  color: #bababa;
+  font-weight: 700;
+}
+
+.pagination-wrapper ul li a {
+  text-decoration: none;
+}
+
+.pagination-wrapper ul li a svg {
+  height: 20px;
+  margin-top: 10px;
+  fill: #bababa;
+}
+
+.pagination-wrapper ul li a svg:hover {
+  fill: #ffa200;
+}
+
+.pagination-wrapper ul .previous {
+  margin-right: 10px;
+}
+
+.pagination-wrapper ul .next {
+  margin-left: 10px;
+}
+
 body {
-  padding: 35px;
   font-family: "Roboto", sans-serif;
   color: #333333;
   line-height: 42px;
   box-sizing: border-box;
 }
 
-container {
+.container {
   max-width: 685px;
   margin: 0 auto;
 }
@@ -583,6 +628,10 @@ p {
 }
 
 /*ONLY FOR STYLEGUIDE FILE*/
+.styleguide-body {
+  padding: 35px;
+}
+
 .styleguide-title {
   color: #a3a3a3;
   font-size: 11px;
