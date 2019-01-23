@@ -1,5 +1,5 @@
 .one-digit-list {
-	border-bottom: 1px solid $headings-color;
+	border-bottom: 1px solid $grey-light;
 	.line-heading {
 		display: inline-block;
 	}
@@ -13,14 +13,14 @@
 	border-spacing: 0px;
 	tr {
 		&:hover {
-		 	background-color: $table-hover-background;
+		 	background-color: $color-hover-background;
 		}
 		td {
-			border-top: 1px solid $headings-color;
+			border-top: 1px solid $grey-light;
 		}
 	}
 	.last-row td {
-		border-bottom: 1px solid $headings-color;
+		border-bottom: 1px solid $grey-light;
 	}
 }
 .link-table {
@@ -36,11 +36,11 @@
 		width: 15%;
 		svg {
 			height: 10px;
-			fill: $headings-color;
+			fill: $grey-medium;
 			margin: 0 10px;
 			cursor: pointer;
 			&:hover {
-				fill: $orange-btn-hover-color;
+				fill: $orange-light;
 			}
 		}
 		svg.trash-icon {

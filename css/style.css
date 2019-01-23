@@ -421,7 +421,7 @@ template {
 }
 
 .sorting-button {
-  color: #a6a6a6;
+  color: #979797;
   font-size: 13px;
   line-height: 15px;
   font-weight: 700;
@@ -439,14 +439,15 @@ template {
 }
 
 .sorting-button svg {
-  fill: #a6a6a6;
+  fill: #bababa;
   height: 7px;
   margin-left: 10px;
+  margin-bottom: 2px;
   visibility: hidden;
 }
 
 .one-digit-list {
-  border-bottom: 1px solid #a6a6a6;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .one-digit-list .line-heading {
@@ -468,11 +469,11 @@ template {
 }
 
 .table-general tr td, .link-table tr td, .sorting-table tr td {
-  border-top: 1px solid #a6a6a6;
+  border-top: 1px solid #e3e3e3;
 }
 
 .table-general .last-row td, .link-table .last-row td, .sorting-table .last-row td {
-  border-bottom: 1px solid #a6a6a6;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .link-table .first-column {
@@ -490,7 +491,7 @@ template {
 
 .link-table .icon-box svg {
   height: 10px;
-  fill: #a6a6a6;
+  fill: #bababa;
   margin: 0 10px;
   cursor: pointer;
 }
@@ -633,7 +634,7 @@ p {
 }
 
 .styleguide-title {
-  color: #a3a3a3;
+  color: #e3e3e3;
   font-size: 11px;
   font-weight: 300;
   line-height: 42px;

@@ -9,9 +9,9 @@
 			width: 40px;
 			text-align: center;
 			&:active {
-				background-color: $table-hover-background;
+				background-color: $color-hover-background;
 				a {
-					color: $grey-btn-hover-color;
+					color: $grey-medium;
 					font-weight: 700;
 				}
 			}
@@ -20,9 +20,9 @@
 				svg {
 					height: 20px;
 					margin-top: 10px;
-					fill: $grey-btn-hover-color;
+					fill: $grey-medium;
 					&:hover {
-						fill: $links-hover-color;
+						fill: $orange-light;
 					}
 				}
 			}

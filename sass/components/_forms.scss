@@ -1,10 +1,10 @@
 .date-period-form {
 	.date-period-wrapper {
 		display: inline-block;
-		border: 1px solid $disabled-btn-color;
+		border: 1px solid $grey-light;
 		border-radius: 4px;
 		&:hover {
-			border: 1px solid $grey-btn-color;
+			border: 1px solid $grey-dark;
 			svg {
 				fill: $main-text-color;
 			}
@@ -20,11 +20,11 @@
 			padding-left: 20px;
 		}
 		.first-date {
-			border-right: 1px solid $disabled-btn-color;
+			border-right: 1px solid $grey-light;
 		}
 		svg {
 			height: 15px;
-			fill: $grey-btn-color;
+			fill: $grey-dark;
 			cursor: pointer;
 			margin-right: 15px;
 		}
