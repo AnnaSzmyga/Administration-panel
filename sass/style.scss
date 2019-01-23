@@ -11,16 +11,18 @@
 @import "components/forms";
 @import "components/other_components";
 
+* {
+	box-sizing: border-box;
+}
 body {
 	font-family: $main-font;
 	color: $main-text-color;
 	line-height: 42px;
-	box-sizing: border-box;
 }
-.container {
+/*.container {
 	max-width: 685px;
 	margin: 0 auto;
-}
+}*/
 p {
 	font-size: $paragraph-font-size;
 	font-weight: 300;
@@ -32,6 +34,7 @@ p {
 
 .styleguide-body {
 	padding: 35px;
+	background-color: #fff;
 }
 .styleguide-title {
 	color: $grey-light;

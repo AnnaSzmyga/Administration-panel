@@ -10,6 +10,7 @@
 }
 .table-general {
 	width: 100%;
+	max-width: 100%;
 	border-spacing: 0px;
 	tr {
 		&:hover {
@@ -23,44 +24,49 @@
 		border-bottom: 1px solid $grey-light;
 	}
 }
-.link-table {
-	@extend .table-general;
-	.first-column {
-		width: 40%;
-	}
-	.line-heading {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	.icon-box {
-		width: 15%;
-		svg {
-			height: 10px;
-			fill: $grey-medium;
-			margin: 0 10px;
-			cursor: pointer;
-			&:hover {
-				fill: $orange-light;
+.scroll-wrapper {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	.link-table {
+		@extend .table-general;
+		.first-column {
+			width: 40%;
+		}
+		.line-heading {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.icon-box {
+			width: 15%;
+			svg {
+				height: 10px;
+				fill: $grey-medium;
+				margin: 0 10px;
+				cursor: pointer;
+				&:hover {
+					fill: $orange-light;
+				}
+			}
+			svg.trash-icon {
+				height: 15px;
 			}
 		}
-		svg.trash-icon {
-			height: 15px;
-		}
 	}
-}
-.sorting-table {
-	@extend .table-general;
-	.first-row {
-		&:hover {
-			background-color: #fff;
+	.sorting-table {
+		@extend .table-general;
+		.first-row {
+			&:hover {
+				background-color: #fff;
+			}
+			td {
+				border: 0;
+			}
 		}
-		td {
-			border: 0;
+		p {
+			font-size: 13px;
+			line-height: 17px;
+			padding: 0 10px;
 		}
-	}
-	p {
-		font-size: 13px;
-		line-height: 17px;
-		padding: 0 10px;
 	}
 }
