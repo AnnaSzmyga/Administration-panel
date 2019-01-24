@@ -31,9 +31,8 @@
   }
 }
 
-@media(max-width: 767px) {
-  @include grid('sm');
-}
+
+@include grid('sm');
 
 @media(min-width: 768px) {
   @include grid('md');

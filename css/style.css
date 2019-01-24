@@ -365,67 +365,76 @@ template {
       flex-wrap: wrap;
 }
 
-@media (max-width: 767px) {
-  .col-sm-1 {
-    -ms-flex: 0 0 8.33333%;
-        flex: 0 0 8.33333%;
-    max-width: 8.33333%;
-  }
-  .col-sm-2 {
-    -ms-flex: 0 0 16.66667%;
-        flex: 0 0 16.66667%;
-    max-width: 16.66667%;
-  }
-  .col-sm-3 {
-    -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
-    max-width: 25%;
-  }
-  .col-sm-4 {
-    -ms-flex: 0 0 33.33333%;
-        flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-  .col-sm-5 {
-    -ms-flex: 0 0 41.66667%;
-        flex: 0 0 41.66667%;
-    max-width: 41.66667%;
-  }
-  .col-sm-6 {
-    -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .col-sm-7 {
-    -ms-flex: 0 0 58.33333%;
-        flex: 0 0 58.33333%;
-    max-width: 58.33333%;
-  }
-  .col-sm-8 {
-    -ms-flex: 0 0 66.66667%;
-        flex: 0 0 66.66667%;
-    max-width: 66.66667%;
-  }
-  .col-sm-9 {
-    -ms-flex: 0 0 75%;
-        flex: 0 0 75%;
-    max-width: 75%;
-  }
-  .col-sm-10 {
-    -ms-flex: 0 0 83.33333%;
-        flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-  }
-  .col-sm-11 {
-    -ms-flex: 0 0 91.66667%;
-        flex: 0 0 91.66667%;
-    max-width: 91.66667%;
-  }
-  .col-sm-12 {
-    -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-    max-width: 100%;
-  }
+.col-sm-1 {
+  -ms-flex: 0 0 8.33333%;
+      flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+}
+
+.col-sm-2 {
+  -ms-flex: 0 0 16.66667%;
+      flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+
+.col-sm-3 {
+  -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-sm-4 {
+  -ms-flex: 0 0 33.33333%;
+      flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.col-sm-5 {
+  -ms-flex: 0 0 41.66667%;
+      flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+
+.col-sm-6 {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-sm-7 {
+  -ms-flex: 0 0 58.33333%;
+      flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+}
+
+.col-sm-8 {
+  -ms-flex: 0 0 66.66667%;
+      flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+
+.col-sm-9 {
+  -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-sm-10 {
+  -ms-flex: 0 0 83.33333%;
+      flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+}
+
+.col-sm-11 {
+  -ms-flex: 0 0 91.66667%;
+      flex: 0 0 91.66667%;
+  max-width: 91.66667%;
+}
+
+.col-sm-12 {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -916,11 +925,16 @@ p {
 }
 
 .sidebar {
+  /*position: fixed;*/
+  display: inline-block;
+  float: left;
   background-color: #191919;
+  width: 190px;
+  height: 100vh;
 }
 
-.sidebar .logo-row {
-  height: 60px;
+.sidebar .logo-box img {
+  margin: 20px 20px;
 }
 
 .sidebar .menu-item {
@@ -932,7 +946,7 @@ p {
   border-left: 5px solid #f58220;
 }
 
-.sidebar .menu-item:hover .menu-title p {
+.sidebar .menu-item:hover a {
   color: #fff;
 }
 
@@ -940,28 +954,94 @@ p {
   fill: #fff;
 }
 
+.sidebar .menu-item a {
+  color: #a6a6a6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 45px;
+}
+
 .sidebar .menu-item .menu-icon {
   margin-left: 15px;
+  margin-right: 15px;
+  display: inline-block;
 }
 
 .sidebar .menu-item .menu-icon svg {
   height: 16px;
-  max-width: 16px;
+  width: 16px;
   fill: #a6a6a6;
 }
 
-.sidebar .menu-item .menu-title {
+.sidebar .manager-wrapper {
+  border-top: 1px solid #979797;
   padding-left: 20px;
+  margin-top: 25px;
 }
 
-.sidebar .menu-item .menu-title p {
+.sidebar .manager-wrapper h3 {
   color: #a6a6a6;
-  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar .manager-wrapper .manager-item {
+  display: -ms-flexbox;
+  display: flex;
+  align-item: center;
+  position: relative;
+}
+
+.sidebar .manager-wrapper .manager-item .avatar {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+
+.sidebar .manager-wrapper .manager-item .avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar .manager-wrapper .manager-item .avatar::after {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #04ae00;
+  position: absolute;
+  top: 0;
+  right: calc(100% - 45px);
+}
+
+.sidebar .manager-wrapper a {
+  font-size: 14px;
 }
 
 .topbar {
+  /*position: fixed;*/
   height: 60px;
+  display: inline-block;
+  float: left;
   background-color: #fff;
+  width: calc(100% - 190px);
+}
+
+.page {
+  float: right;
+  background-color: #fff;
+  height: 200px;
+  width: calc(100vw - 230px);
+  margin: 20px;
+  box-shadow: 2px 2px 10px 2px #e3e3e3;
+}
+
+section {
+  padding-top: 30px;
+  border-top: 1px solid #f5f5f2;
 }
 
 /*ONLY FOR STYLEGUIDE FILE*/
