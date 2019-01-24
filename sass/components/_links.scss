@@ -1,0 +1,19 @@
+.link-general {
+	color: $links-color;
+	font-weight: 300;
+	text-decoration: none;
+	cursor: pointer;
+	&:hover {
+		color: $orange-light;
+	}
+}
+.large-link {
+	@extend .link-general;
+	font-size: $large-link-size;
+	line-height: 17px;
+}
+.small-link {
+	@extend .link-general;
+	font-size: $small-link-size;
+	line-height: 42px;
+}
