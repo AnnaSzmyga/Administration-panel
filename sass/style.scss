@@ -18,6 +18,7 @@ body {
 	font-family: $main-font;
 	color: $main-text-color;
 	line-height: 42px;
+	background-color: $color-hover-background;
 }
 /*.container {
 	max-width: 685px;
@@ -26,6 +27,47 @@ body {
 p {
 	font-size: $paragraph-font-size;
 	font-weight: 300;
+}
+.sidebar {
+	background-color: $sidebar-black;
+	.logo-row {
+		height: 60px;
+	}
+	.menu-item {
+		border-left: 5px solid $sidebar-black;
+		&:hover {
+			background-color: $sidebar-black-hover;
+			border-left: 5px solid $orange-dark;
+			.menu-title p {
+				color: #fff;
+			}
+			.menu-icon svg {
+				fill: #fff;
+			}
+		}
+		.menu-icon {
+			margin-left: 15px;
+			svg {
+				height: 16px;
+				max-width: 16px;
+				fill: $headings-color;
+			}
+		}
+		.menu-title {
+			padding-left: 20px;
+			p {
+				color: $headings-color;
+				margin: 0;
+			}
+		}
+	}
+}
+.topbar {
+	height: 60px;
+	background-color: #fff;
+	}
+.page {
+	
 }
 
 
