@@ -884,6 +884,7 @@ template {
 
 .pagination-wrapper ul li a {
   text-decoration: none;
+  line-height: 42px;
 }
 
 .pagination-wrapper ul li a svg {
@@ -911,7 +912,7 @@ template {
 body {
   font-family: "Roboto", sans-serif;
   color: #333333;
-  line-height: 42px;
+  /*line-height: 42px;*/
   background-color: #f5f5f2;
 }
 
@@ -925,7 +926,7 @@ p {
 }
 
 .sidebar {
-  /*position: fixed;*/
+  position: fixed;
   display: inline-block;
   float: left;
   background-color: #191919;
@@ -933,8 +934,8 @@ p {
   height: 100vh;
 }
 
-.sidebar .logo-box img {
-  margin: 20px 20px;
+.sidebar .logo-box {
+  padding: 17px 20px;
 }
 
 .sidebar .menu-item {
@@ -1022,12 +1023,70 @@ p {
 }
 
 .topbar {
-  /*position: fixed;*/
-  height: 60px;
-  display: inline-block;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   float: left;
   background-color: #fff;
+  border-bottom: 1px solid #e3e3e3;
   width: calc(100% - 190px);
+  margin-left: 190px;
+}
+
+.topbar .topbar-item {
+  height: 60px;
+  padding: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  border-left: 1px solid #e3e3e3;
+}
+
+.topbar .topbar-item:hover {
+  background-color: #f5f5f2;
+}
+
+.topbar .topbar-item svg {
+  height: 18px;
+  fill: #a6a6a6;
+}
+
+.topbar .wallet p {
+  padding: 0 20px;
+  color: #a6a6a6;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.topbar .wallet svg.arrow {
+  height: 7px;
+}
+
+.topbar .notification {
+  position: relative;
+}
+
+.topbar .notification::after {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffa200;
+  position: absolute;
+  top: 22px;
+  right: 21px;
+}
+
+.topbar .profile a {
+  padding-left: 20px;
+}
+
+.topbar .quit svg {
+  height: 14px;
 }
 
 .page {
@@ -1036,6 +1095,7 @@ p {
   height: 200px;
   width: calc(100vw - 230px);
   margin: 20px;
+  margin-top: 80px;
   box-shadow: 2px 2px 10px 2px #e3e3e3;
 }
 

@@ -17,7 +17,7 @@
 body {
 	font-family: $main-font;
 	color: $main-text-color;
-	line-height: 42px;
+	/*line-height: 42px;*/
 	background-color: $color-hover-background;
 }
 /*.container {
@@ -29,14 +29,14 @@ p {
 	font-weight: 300;
 }
 .sidebar {
-	/*position: fixed;*/
+	position: fixed;
 	display: inline-block;
 	float: left;
 	background-color: $sidebar-black;
 	width: 190px;
 	height: 100vh;
-	.logo-box img {
-		margin: 20px 20px;
+	.logo-box {
+		padding: 17px 20px;
 	}
 	.menu-item {
 		border-left: 5px solid $sidebar-black;
@@ -109,12 +109,59 @@ p {
 	}
 }
 .topbar {
-	/*position: fixed;*/
-	height: 60px;
-	display: inline-block;
+	position: fixed;
+	display: flex;
+	justify-content: flex-end;
 	float: left;
 	background-color: #fff;
+	border-bottom: 1px solid $grey-light;
 	width: calc(100% - 190px);
+	margin-left: 190px;
+		.topbar-item {
+			height: 60px;
+			padding: 20px;
+			display: flex;	
+			align-items: center;
+			border-left: 1px solid $grey-light;
+			&:hover {
+				background-color: $color-hover-background;
+			}
+			svg {
+				height: 18px;
+				fill:  $headings-color;
+			}
+		}
+		.wallet { 
+			p {
+				padding: 0 20px;
+				color: $headings-color;
+				font-size: 20px;
+				font-weight: 700;
+			}
+			svg.arrow {
+				height: 7px;
+			}
+		}
+		.notification {
+			position: relative;
+			&::after {
+				display: block;
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: $orange-light;
+				position: absolute;
+				top: 22px;
+				right: 21px;
+			}
+		}
+		.profile a {
+			padding-left: 20px;
+		}
+		.quit svg {
+			height: 14px;
+		}
 	}
 .page {
 	float: right;
@@ -122,6 +169,7 @@ p {
 	height: 200px;
 	width: calc(100vw - 230px);
 	margin: 20px;
+	margin-top: 80px;
 	box-shadow: 2px 2px 10px 2px $grey-light;
 }
 section {
