@@ -916,7 +916,7 @@ body {
   background-color: #f5f5f2;
 }
 
-/*.container {
+/*.page-container {
 	max-width: 685px;
 	margin: 0 auto;
 }*/
@@ -928,14 +928,45 @@ p {
 .sidebar {
   position: fixed;
   display: inline-block;
-  float: left;
   background-color: #191919;
   width: 190px;
   height: 100vh;
 }
 
 .sidebar .logo-box {
-  padding: 17px 20px;
+  padding: 17px 18px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.sidebar .logo-box .hamburger {
+  visibility: hidden;
+  background-color: #191919;
+  width: 20px;
+  height: 19px;
+  border: 0;
+  border-top: 3px solid #a6a6a6;
+  position: relative;
+}
+
+.sidebar .logo-box .hamburger::before, .sidebar .logo-box .hamburger::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #a6a6a6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(5px);
+}
+
+.sidebar .logo-box .hamburger::after {
+  transform: translateY(13px);
 }
 
 .sidebar .menu-item {
@@ -977,8 +1008,9 @@ p {
 
 .sidebar .manager-wrapper {
   border-top: 1px solid #979797;
-  padding-left: 20px;
+  padding-left: 18px;
   margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .sidebar .manager-wrapper h3 {
@@ -1028,14 +1060,18 @@ p {
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  float: left;
   background-color: #fff;
   border-bottom: 1px solid #e3e3e3;
   width: calc(100% - 190px);
   margin-left: 190px;
 }
 
-.topbar .topbar-item {
+.topbar .topbar-row {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topbar .topbar-row .topbar-item {
   height: 60px;
   padding: 20px;
   display: -ms-flexbox;
@@ -1045,31 +1081,31 @@ p {
   border-left: 1px solid #e3e3e3;
 }
 
-.topbar .topbar-item:hover {
+.topbar .topbar-row .topbar-item:hover {
   background-color: #f5f5f2;
 }
 
-.topbar .topbar-item svg {
+.topbar .topbar-row .topbar-item svg {
   height: 18px;
   fill: #a6a6a6;
 }
 
-.topbar .wallet p {
+.topbar .topbar-row .wallet p {
   padding: 0 20px;
   color: #a6a6a6;
   font-size: 20px;
   font-weight: 700;
 }
 
-.topbar .wallet svg.arrow {
+.topbar .topbar-row .wallet svg.arrow {
   height: 7px;
 }
 
-.topbar .notification {
+.topbar .topbar-row .notification {
   position: relative;
 }
 
-.topbar .notification::after {
+.topbar .topbar-row .notification::after {
   display: block;
   content: "";
   width: 6px;
@@ -1078,30 +1114,89 @@ p {
   background-color: #ffa200;
   position: absolute;
   top: 22px;
-  right: 21px;
+  left: 50%;
+  transform: translateX(2px);
 }
 
-.topbar .profile a {
+.topbar .topbar-row .profile a {
   padding-left: 20px;
 }
 
-.topbar .quit svg {
+.topbar .topbar-row .quit svg {
   height: 14px;
 }
 
 .page {
-  float: right;
+  float: left;
   background-color: #fff;
   height: 200px;
   width: calc(100vw - 230px);
-  margin: 20px;
-  margin-top: 80px;
+  margin: 78px 18px 18px 208px;
   box-shadow: 2px 2px 10px 2px #e3e3e3;
+}
+
+.page .page-container {
+  max-width: 685px;
+  margin: 0 auto;
 }
 
 section {
   padding-top: 30px;
   border-top: 1px solid #f5f5f2;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  .sidebar .logo-box .hamburger {
+    visibility: visible;
+  }
+  .show {
+    display: block;
+  }
+  .topbar {
+    width: 100%;
+    position: static;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .page {
+    float: none;
+    width: calc(100% - 36px);
+    margin: 18px auto;
+  }
+}
+
+@media (max-width: 580px) {
+  .topbar {
+    border: 0;
+  }
+  .topbar .topbar-row {
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .topbar .wallet, .topbar .profile {
+    -ms-flex: 3;
+        flex: 3;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .topbar .notification, .topbar .quit {
+    -ms-flex: 1;
+        flex: 1;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .topbar .notification::after {
+    right: 42%;
+  }
 }
 
 /*ONLY FOR STYLEGUIDE FILE*/
