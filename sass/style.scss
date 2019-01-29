@@ -20,10 +20,6 @@ body {
 	/*line-height: 42px;*/
 	background-color: $color-hover-background;
 }
-/*.page-container {
-	max-width: 685px;
-	margin: 0 auto;
-}*/
 p {
 	font-size: $paragraph-font-size;
 	font-weight: 300;
@@ -196,19 +192,45 @@ p {
 .page {
 	float: left;
 	background-color: #fff;
-	height: 200px;
 	width: calc(100vw - 230px);
 	margin: 78px 18px 18px 208px;
 	box-shadow: 2px 2px 10px 2px $grey-light;
+	section {
+		padding: 30px 18px;
+		border-top: 1px solid $grey-light;
+	}
 	.page-container {
 		max-width: 685px;
 		margin: 0 auto;
 	}
+	.image-title {
+		margin-top: 50px;
+	}
+	.scroll-wrapper {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		img {
+			width: auto;
+			max-width: 100%;
+		}
+	}
 }
-section {
-	padding-top: 30px;
-	border-top: 1px solid $color-hover-background;
+
+.general + .links {margin-top: 0;}
+
+.links, .banners {
+	button {
+		display: block;
+		margin: 0 auto;
+	}
 }
+.postback {
+	section {
+		border-bottom: 1px solid $grey-light;
+	}
+}
+
 @media (max-width: 767px) {
 	.menu {
 		display: none;
@@ -244,19 +266,23 @@ section {
 			border-bottom: 1px solid $grey-light;
 		}
 		.wallet, .profile {
-			flex: 3;
+			flex: 6;
 			justify-content: center;
 		}
 		.notification, .quit {
 			flex: 1;
 			justify-content: center;
 		}
-		.notification::after {
-			right: 42%;
-		}
 	}
 }
-
+@media (min-width: 768px) {
+	.first-column .one-digit-list {
+		margin-right: 15px;
+	}
+	.second-column .one-digit-list {
+		margin-left: 15px;
+	}
+}
 
 
 /*ONLY FOR STYLEGUIDE FILE*/

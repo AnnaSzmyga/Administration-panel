@@ -633,6 +633,8 @@ template {
   font-weight: 500;
   color: #a6a6a6;
   text-transform: uppercase;
+  margin: 0;
+  padding-left: 18px;
 }
 
 .section-heading, .line-heading {
@@ -741,8 +743,11 @@ template {
 }
 
 .one-digit-list p {
-  font-size: 16px;
   float: right;
+  font-size: 16px;
+  line-height: 42px;
+  margin: 0;
+  margin-top: 16px;
 }
 
 .table-general, .scroll-wrapper .link-table, .scroll-wrapper .sorting-table {
@@ -769,13 +774,18 @@ template {
   overflow-x: auto;
 }
 
+.scroll-wrapper .link-table {
+  margin: 30px auto;
+}
+
 .scroll-wrapper .link-table .first-column {
-  width: 40%;
+  width: 45%;
 }
 
 .scroll-wrapper .link-table .line-heading {
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 18px;
 }
 
 .scroll-wrapper .link-table .icon-box {
@@ -783,6 +793,7 @@ template {
 }
 
 .scroll-wrapper .link-table .icon-box svg {
+  visibility: hidden;
   height: 10px;
   fill: #bababa;
   margin: 0 10px;
@@ -797,11 +808,19 @@ template {
   height: 15px;
 }
 
-.scroll-wrapper .sorting-table .first-row:hover {
+.scroll-wrapper .link-table tr:hover .icon-box svg {
+  visibility: visible;
+}
+
+.scroll-wrapper .sorting-table thead tr {
+  text-align: left;
+}
+
+.scroll-wrapper .sorting-table thead tr:hover {
   background-color: #fff;
 }
 
-.scroll-wrapper .sorting-table .first-row td {
+.scroll-wrapper .sorting-table thead tr th {
   border: 0;
 }
 
@@ -811,10 +830,34 @@ template {
   padding: 0 10px;
 }
 
-.date-period-form .date-period-wrapper {
-  display: inline-block;
+.input-general, .date-period-form .date-period-wrapper input, .personal-data-form input, .postback-form textarea, .postback-form select {
+  min-height: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
+  padding-left: 20px;
+  outline: none;
+}
+
+.date-period-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.date-period-form .date-period-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  margin: 5px;
 }
 
 .date-period-form .date-period-wrapper:hover {
@@ -827,17 +870,11 @@ template {
 
 .date-period-form .date-period-wrapper input {
   border: 0;
-  height: 30px;
-  max-width: 150px;
-  margin: 5px auto;
-  font-size: 14px;
-  font-weight: 300;
-  color: #333333;
-  padding-left: 20px;
 }
 
-.date-period-form .date-period-wrapper .first-date {
+.date-period-form .date-period-wrapper .first-date-wrapper {
   border-right: 1px solid #e3e3e3;
+  margin: 5px auto;
 }
 
 .date-period-form .date-period-wrapper svg {
@@ -850,7 +887,7 @@ template {
 .date-period-form .orange-btn {
   height: 42px;
   width: 42px;
-  margin-left: 10px;
+  margin: 5px;
 }
 
 .date-period-form .orange-btn svg {
@@ -858,7 +895,170 @@ template {
   fill: #fff;
 }
 
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.personal-data-form input {
+  width: 100%;
+  min-height: 30px;
+  margin: 8px;
+}
+
+.personal-data-form input:hover, .personal-data-form input:focus {
+  border: 1px solid #979797;
+}
+
+.personal-data-form label {
+  padding: 8px;
+}
+
+.personal-data-form button {
+  display: block;
+  margin: 0 auto;
+}
+
+.postback-form .section-heading, .postback-form .line-heading {
+  display: block;
+  margin: 0;
+}
+
+.postback-form textarea {
+  height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.postback-form textarea:hover, .postback-form textarea:focus {
+  border: 1px solid #979797;
+}
+
+.postback-form select {
+  margin-top: 0;
+  margin-bottom: 12px;
+  width: 100%;
+  min-height: 30px;
+}
+
+.postback-form select:hover, .postback-form select:focus {
+  border: 1px solid #979797;
+}
+
+.postback-form .not-send-wrapper {
+  padding: 18px;
+}
+
+.postback-form .not-send-wrapper span {
+  color: #ff0000;
+}
+
+.postback-form .not-send-wrapper input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  margin: 18px;
+}
+
+.postback-form .not-send-wrapper label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.postback-form .not-send-wrapper .not-send-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.postback-form .not-send-wrapper .not-send-item svg {
+  visibility: hidden;
+  height: 14px;
+  fill: #bababa;
+  margin: 20px 18px;
+  cursor: pointer;
+}
+
+.postback-form .not-send-wrapper .not-send-item svg:hover {
+  fill: #ffa200;
+}
+
+.postback-form .not-send-wrapper .not-send-item:hover {
+  background-color: #f5f5f2;
+}
+
+.postback-form .not-send-wrapper .not-send-item:hover svg {
+  visibility: visible;
+}
+
+.postback-form .send-after-wrapper {
+  padding: 18px;
+}
+
+.postback-form .button-section {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .date-period-form .date-period-wrapper {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .date-period-form .date-period-wrapper input {
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .date-period-form .date-period-wrapper .first-date-wrapper {
+    margin: 0 5px;
+    border: 0;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .date-period-form .date-period-wrapper svg {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .personal-data-form input {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .postback-form .not-send-wrapper {
+    border-bottom: 1px solid #e3e3e3;
+  }
+}
+
+@media (min-width: 992px) {
+  .postback-form .signup-wrapper {
+    padding-right: 8px;
+  }
+  .postback-form .deposit-wrapper {
+    padding-left: 8px;
+  }
+  .postback-form .to-countries-wrapper {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .postback-form .not-send-wrapper {
+    border-right: 1px solid #e3e3e3;
+  }
+}
+
 .pagination-wrapper ul {
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 30px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -916,10 +1116,6 @@ body {
   background-color: #f5f5f2;
 }
 
-/*.page-container {
-	max-width: 685px;
-	margin: 0 auto;
-}*/
 p {
   font-size: 14px;
   font-weight: 300;
@@ -1129,10 +1325,14 @@ p {
 .page {
   float: left;
   background-color: #fff;
-  height: 200px;
   width: calc(100vw - 230px);
   margin: 78px 18px 18px 208px;
   box-shadow: 2px 2px 10px 2px #e3e3e3;
+}
+
+.page section {
+  padding: 30px 18px;
+  border-top: 1px solid #e3e3e3;
 }
 
 .page .page-container {
@@ -1140,9 +1340,32 @@ p {
   margin: 0 auto;
 }
 
-section {
-  padding-top: 30px;
-  border-top: 1px solid #f5f5f2;
+.page .image-title {
+  margin-top: 50px;
+}
+
+.page .scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.page .scroll-wrapper img {
+  width: auto;
+  max-width: 100%;
+}
+
+.general + .links {
+  margin-top: 0;
+}
+
+.links button, .banners button {
+  display: block;
+  margin: 0 auto;
+}
+
+.postback section {
+  border-bottom: 1px solid #e3e3e3;
 }
 
 @media (max-width: 767px) {
@@ -1183,8 +1406,8 @@ section {
     border-bottom: 1px solid #e3e3e3;
   }
   .topbar .wallet, .topbar .profile {
-    -ms-flex: 3;
-        flex: 3;
+    -ms-flex: 6;
+        flex: 6;
     -ms-flex-pack: center;
         justify-content: center;
   }
@@ -1194,8 +1417,14 @@ section {
     -ms-flex-pack: center;
         justify-content: center;
   }
-  .topbar .notification::after {
-    right: 42%;
+}
+
+@media (min-width: 768px) {
+  .first-column .one-digit-list {
+    margin-right: 15px;
+  }
+  .second-column .one-digit-list {
+    margin-left: 15px;
   }
 }
 
