@@ -88,33 +88,48 @@
 		padding: 20px;
 		margin-top: 0;
 		margin-bottom: 12px;
+		resize: none;
 		&:hover, &:focus {
 			border: 1px solid $grey-dark;
 		}
 	}
-	select {
-		@extend .input-general;
-		margin-top: 0;
-		margin-bottom: 12px;
-		width: 100%;
-		min-height: 30px;
-		&:hover, &:focus {
-			border: 1px solid $grey-dark;
+	.select-wrapper {
+		position: relative;
+		&:hover .select-icon svg {
+			fill: $grey-dark;
+		}
+		select {
+			@extend .input-general;
+			margin-top: 0;
+			margin-bottom: 12px;
+			width: 100%;
+			min-height: 30px;
+			appearance: none;
+			border: 1px solid $grey-light;
+			border-radius: 4px;
+			background: transparent;
+			position: absolute;
+
+			+ .select-icon {
+				min-height: 30px;
+				width: 100%;
+				svg {
+					height: 10px;
+					margin: 10px;
+					fill: $grey-light;
+					float: right;
+				}
+			}
+
+			&:hover, &:focus {
+				border: 1px solid $grey-dark;
+			}
 		}
 	}
 	.not-send-wrapper {
 		padding: 18px;
-		span {
+		h3 span {
 			color: $red-primary;
-		}
-		input[type="checkbox"] {
-			height: 18px;
-			width: 18px;
-			margin: 18px;
-		}
-		label {
-			font-size: $paragraph-font-size;
-			font-weight: 300;
 		}
 		.not-send-item {
 			display: flex;
@@ -123,6 +138,39 @@
 			.checkbox-wrapper {
 				display: flex;
 				align-items: center;
+				position: relative;
+				
+				input[type="checkbox"] {
+					height: 18px;
+					width: 18px;
+					position: absolute;
+					left: 18px;
+					opacity: 0;
+					+ .icon {
+						height: 18px;
+						width: 18px;
+						margin: 18px;
+						border: 1px solid $grey-light;
+						text-align: center;
+						.fa-check {
+							display: none;
+							color: #fff;
+							font-size: 12px;
+							line-height: 18px;	
+						}
+					}
+					&:checked + .icon {
+						background-color: $green-primary;
+						border-color: $green-primary;
+						.fa-check {
+							display: block;
+						}
+					}
+				}
+				label {
+					font-size: $paragraph-font-size;
+					font-weight: 300;
+				}
 			}
 			svg {
 				visibility: hidden;

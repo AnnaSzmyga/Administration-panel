@@ -830,7 +830,7 @@ template {
   padding: 0 10px;
 }
 
-.input-general, .date-period-form .date-period-wrapper input, .personal-data-form input, .postback-form textarea, .postback-form select {
+.input-general, .date-period-form .date-period-wrapper input, .personal-data-form input, .postback-form textarea, .postback-form .select-wrapper select {
   min-height: 30px;
   font-size: 14px;
   font-weight: 300;
@@ -932,20 +932,48 @@ template {
   padding: 20px;
   margin-top: 0;
   margin-bottom: 12px;
+  resize: none;
 }
 
 .postback-form textarea:hover, .postback-form textarea:focus {
   border: 1px solid #979797;
 }
 
-.postback-form select {
+.postback-form .select-wrapper {
+  position: relative;
+}
+
+.postback-form .select-wrapper:hover .select-icon svg {
+  fill: #979797;
+}
+
+.postback-form .select-wrapper select {
   margin-top: 0;
   margin-bottom: 12px;
   width: 100%;
   min-height: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  background: transparent;
+  position: absolute;
 }
 
-.postback-form select:hover, .postback-form select:focus {
+.postback-form .select-wrapper select + .select-icon {
+  min-height: 30px;
+  width: 100%;
+}
+
+.postback-form .select-wrapper select + .select-icon svg {
+  height: 10px;
+  margin: 10px;
+  fill: #e3e3e3;
+  float: right;
+}
+
+.postback-form .select-wrapper select:hover, .postback-form .select-wrapper select:focus {
   border: 1px solid #979797;
 }
 
@@ -953,19 +981,8 @@ template {
   padding: 18px;
 }
 
-.postback-form .not-send-wrapper span {
+.postback-form .not-send-wrapper h3 span {
   color: #ff0000;
-}
-
-.postback-form .not-send-wrapper input[type="checkbox"] {
-  height: 18px;
-  width: 18px;
-  margin: 18px;
-}
-
-.postback-form .not-send-wrapper label {
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .postback-form .not-send-wrapper .not-send-item {
@@ -982,6 +999,44 @@ template {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+  position: relative;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  left: 18px;
+  opacity: 0;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper input[type="checkbox"] + .icon {
+  height: 18px;
+  width: 18px;
+  margin: 18px;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper input[type="checkbox"] + .icon .fa-check {
+  display: none;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper input[type="checkbox"]:checked + .icon {
+  background-color: #04ae00;
+  border-color: #04ae00;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper input[type="checkbox"]:checked + .icon .fa-check {
+  display: block;
+}
+
+.postback-form .not-send-wrapper .not-send-item .checkbox-wrapper label {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .postback-form .not-send-wrapper .not-send-item svg {
@@ -1322,35 +1377,38 @@ p {
   height: 14px;
 }
 
-.page {
-  float: left;
+.panel-wrapper {
+  padding-top: 78px;
+}
+
+.panel {
   background-color: #fff;
   width: calc(100vw - 230px);
-  margin: 78px 18px 18px 208px;
+  margin: 0 18px 18px 208px;
   box-shadow: 2px 2px 10px 2px #e3e3e3;
 }
 
-.page section {
+.panel section {
   padding: 30px 18px;
   border-top: 1px solid #e3e3e3;
 }
 
-.page .page-container {
+.panel .panel-container {
   max-width: 685px;
   margin: 0 auto;
 }
 
-.page .image-title {
+.panel .image-title {
   margin-top: 50px;
 }
 
-.page .scroll-wrapper {
+.panel .scroll-wrapper {
   display: block;
   width: 100%;
   overflow-x: auto;
 }
 
-.page .scroll-wrapper img {
+.panel .scroll-wrapper img {
   width: auto;
   max-width: 100%;
 }
@@ -1390,8 +1448,10 @@ p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .page {
-    float: none;
+  .panel-wrapper {
+    padding: 0;
+  }
+  .panel {
     width: calc(100% - 36px);
     margin: 18px auto;
   }
