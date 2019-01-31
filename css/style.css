@@ -626,6 +626,71 @@ template {
   }
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  display: none;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: auto;
+}
+
+.overlay ::webkit-scrollbar {
+  display: none;
+}
+
+.overlay .modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  display: none;
+}
+
+.overlay .modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  cursor: default;
+}
+
+.overlay.showModal {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal.showModal {
+  display: block;
+}
+
+#modalQuit {
+  min-width: 500px;
+}
+
+#modalQuit h3 {
+  margin-left: 30px;
+}
+
+#modalQuit button {
+  min-width: 120px;
+  margin-right: 30px;
+}
+
+.button-wrapper {
+  text-align: right;
+  padding: 30px 0;
+  border-top: 1px solid #e3e3e3;
+}
+
 /*Components*/
 .page-heading {
   font-size: 16px;
@@ -1178,6 +1243,7 @@ p {
 
 .sidebar {
   position: fixed;
+  top: 0;
   display: inline-block;
   background-color: #191919;
   width: 190px;
@@ -1307,6 +1373,7 @@ p {
 
 .topbar {
   position: fixed;
+  top: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
@@ -1330,6 +1397,7 @@ p {
   -ms-flex-align: center;
       align-items: center;
   border-left: 1px solid #e3e3e3;
+  cursor: pointer;
 }
 
 .topbar .topbar-row .topbar-item:hover {
@@ -1377,14 +1445,10 @@ p {
   height: 14px;
 }
 
-.panel-wrapper {
-  padding-top: 78px;
-}
-
 .panel {
   background-color: #fff;
   width: calc(100vw - 230px);
-  margin: 0 18px 18px 208px;
+  margin: 78px 18px 18px 208px;
   box-shadow: 2px 2px 10px 2px #e3e3e3;
 }
 

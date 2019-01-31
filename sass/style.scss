@@ -2,6 +2,7 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
+@import "modals";
 
 /*Components*/
 @import "components/headings";
@@ -27,6 +28,7 @@ p {
 
 .sidebar {
 	position: fixed;
+	top: 0;
 	display: inline-block;
 	background-color: $sidebar-black;
 	width: 190px;
@@ -133,6 +135,7 @@ p {
 }
 .topbar {
 	position: fixed;
+	top: 0;
 	display: flex;
 	justify-content: flex-end;
 	background-color: #fff;
@@ -147,6 +150,7 @@ p {
 			display: flex;	
 			align-items: center;
 			border-left: 1px solid $grey-light;
+			cursor: pointer;
 			&:hover {
 				background-color: $color-hover-background;
 			}
@@ -190,13 +194,10 @@ p {
 	}
 }
 
-.panel-wrapper {
-	padding-top: 78px;
-}
 .panel {
 	background-color: #fff;
 	width: calc(100vw - 230px);
-	margin: 0 18px 18px 208px;
+	margin: 78px 18px 18px 208px;
 	box-shadow: 2px 2px 10px 2px $grey-light;
 	section {
 		padding: 30px 18px;
