@@ -22,6 +22,10 @@
 		td {
 			border-top: 1px solid $grey-light;
 		}
+		.line-heading {
+			line-height: 25px;
+	    	margin: 20px auto;
+		}
 	}
 	.last-row td {
 		border-bottom: 1px solid $grey-light;

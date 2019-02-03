@@ -34,25 +34,25 @@
 	}
 }
 .sorting-button {
-		@extend .button-general;
-		color: $grey-dark;
-		font-size: 13px;
-		line-height: 15px;
-		font-weight: 700;
-		background-color: #fff;
-		margin-bottom: 15px;
-		&:hover {
-			color: $main-text-color;
-			background-color: $color-hover-background;
-			svg {
-				visibility: visible;	
-			}
-		}
+	@extend .button-general;
+	color: $grey-dark;
+	font-size: 13px;
+	line-height: 15px;
+	font-weight: 700;
+	background-color: #fff;
+	margin-bottom: 15px;
+	&:hover {
+		color: $main-text-color;
+		background-color: $color-hover-background;
 		svg {
-			fill: $grey-medium;
-			height: 7px;
-			margin-left: 10px;
-			margin-bottom: 2px;
-			visibility: hidden;
+			visibility: visible;	
 		}
 	}
+	svg {
+		fill: $grey-medium;
+		height: 7px;
+		margin-left: 10px;
+		margin-bottom: 2px;
+		visibility: hidden;
+	}
+}
