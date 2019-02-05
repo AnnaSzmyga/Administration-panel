@@ -4,8 +4,11 @@
 		display: inline-block;
 	}
 	p {
-		font-size: 16px;
 		float: right;
+		font-size: 16px;
+		line-height: 42px;
+		margin: 0;
+		margin-top: 16px;
 	}
 }
 .table-general {
@@ -19,6 +22,10 @@
 		td {
 			border-top: 1px solid $grey-light;
 		}
+		.line-heading {
+			line-height: 25px;
+	    	margin: 20px auto;
+		}
 	}
 	.last-row td {
 		border-bottom: 1px solid $grey-light;
@@ -30,16 +37,19 @@
 	overflow-x: auto;
 	.link-table {
 		@extend .table-general;
+		margin: 30px auto;
 		.first-column {
-			width: 40%;
+			width: 45%;
 		}
 		.line-heading {
 			margin-top: 10px;
 			margin-bottom: 10px;
+			padding-left: 18px;
 		}
 		.icon-box {
 			width: 15%;
 			svg {
+				visibility: hidden;
 				height: 10px;
 				fill: $grey-medium;
 				margin: 0 10px;
@@ -52,14 +62,18 @@
 				height: 15px;
 			}
 		}
+		tr:hover .icon-box svg {
+			visibility: visible;
+		}
 	}
 	.sorting-table {
 		@extend .table-general;
-		.first-row {
+		thead tr {
+		text-align: left;
 			&:hover {
 				background-color: #fff;
 			}
-			td {
+			th {
 				border: 0;
 			}
 		}
